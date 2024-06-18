@@ -8,5 +8,5 @@ export const FRUITS = [
   'Orange',
   'Pear',
   'Pineapple',
-  'Strawberry'
+  'Strawberry',
 ];

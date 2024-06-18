@@ -1,13 +1,9 @@
-import React, { useState, useRef } from 'react';
-import './App.css';
-import FruitAutocomplete from './components/FruitAutocomplete/FruitAutocomplete';
+import React from 'react'
+import './App.css'
+import FruitAutocomplete from './components/FruitAutocomplete/FruitAutocomplete'
 
 function App() {
-  const [selectedFruit, setSelectedFruit] = useState<String|null>(null)
 
-  const { current: handleChangeSelectedFruit } = useRef((fruit: String) => {
-    setSelectedFruit(fruit)
-  })
   return (
     <div className="App">
       <FruitAutocomplete />
@@ -16,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

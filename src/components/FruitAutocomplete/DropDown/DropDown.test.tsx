@@ -1,25 +1,26 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import DropDown from './DropDown';
+import React from 'react'
+import { render, screen, fireEvent } from '@testing-library/react'
+import DropDown from './DropDown'
 
-const items = ['Banana', 'Apple']
+import { FRUITS } from '../../../constants'
 
 test('renders all items', () => {
-  render(<DropDown  itemNames={items} onItemSelected={() => {}}/>);
-  items.forEach(item => {
-    const element = screen.getByText(item);
-    expect(element).toBeInTheDocument();
+  const callBack = jest.fn()
+  render(<DropDown  itemNames={FRUITS} onItemSelected={callBack}/>)
+  FRUITS.forEach(item => {
+    const element = screen.getByText(item)
+    expect(element).toBeInTheDocument()
   })
-});
+})
 
 test('calls "onItemSelected" when item is clicked', () => {
-  const callBack = jest.fn();
+  const callBack = jest.fn()
 
-  render(<DropDown  itemNames={items} onItemSelected={callBack}/>);
-  items.forEach(item => {
-    const element = screen.getByText(item);
+  render(<DropDown  itemNames={FRUITS} onItemSelected={callBack}/>)
+  FRUITS.forEach(item => {
+    const element = screen.getByText(item)
     fireEvent.click(element)
-    expect(callBack).toHaveBeenCalledWith(item);
+    expect(callBack).toHaveBeenCalledWith(item)
   })
-  expect(callBack).toHaveBeenCalledTimes(items.length);
-});
+  expect(callBack).toHaveBeenCalledTimes(FRUITS.length)
+})

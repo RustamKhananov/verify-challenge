@@ -1,5 +1,5 @@
-import React, { memo } from 'react';
-import './DropDown.css';
+import React, { memo } from 'react'
+import './DropDown.css'
 
 interface DropDownProps {
   itemNames: string[]
@@ -14,8 +14,6 @@ function DropDown({ itemNames, onItemSelected }: DropDownProps ) {
     if (value) onItemSelected(value)
   }
 
-  const a = 2
-
   return (
     <div className="DropDown">
       {!!itemNames.length && itemNames.map(itemName => (
@@ -25,10 +23,10 @@ function DropDown({ itemNames, onItemSelected }: DropDownProps ) {
       ))}
       {!itemNames.length && <div className='DropDown_disabledItem'>
           No matches found.
-        </div>
+      </div>
       }
     </div>
-  );
+  )
 }
 
-export default memo(DropDown);
+export default memo(DropDown)

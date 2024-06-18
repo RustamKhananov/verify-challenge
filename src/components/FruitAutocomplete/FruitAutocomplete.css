@@ -1,7 +1,6 @@
 .FruitAutocomplete {
   position: relative;
 }
-
 .FruitAutocomplete_input {
   width: 320px;
   height: 48px;
@@ -9,7 +8,6 @@
   padding: 8px 28px 8px 8px;
   box-sizing: border-box;
 }
-
 .FruitAutocomplete_arrowDown {
   position: absolute;
   right: 8px;
@@ -21,4 +19,3 @@
   top: 12px;
   transform: rotate(180deg);
 }
-
