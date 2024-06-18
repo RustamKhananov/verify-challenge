@@ -1,6 +1,6 @@
 # verify-challenge TASK #1
 
-This project was deployed [here](https://rustamkhananov.github.io/verify-challenge/)./
+This project was deployed [here](https://rustamkhananov.github.io/verify-challenge/).\
 Main goal was to create component "FruitAutocomplete"/
 The rest of the project was created to demonstrate this component/
 
