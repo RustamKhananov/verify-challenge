@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useRef } from 'react';
 import './App.css';
+import FruitAutocomplete from './components/FruitAutocomplete/FruitAutocomplete';
 
 function App() {
+  const [selectedFruit, setSelectedFruit] = useState<String|null>(null)
+
+  const { current: handleChangeSelectedFruit } = useRef((fruit: String) => {
+    setSelectedFruit(fruit)
+  })
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FruitAutocomplete />
+      <span>This is just some text needed to demonstrate how dropdown works</span>
     </div>
   );
 }
