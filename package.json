@@ -2,6 +2,7 @@
   "name": "veryfi-challenge",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rustamkhananov.github.io/verify-challenge/",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -24,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy" : "gh-pages -d build",
+    "predeploy" : "npm run build"
   },
   "browserslist": {
     "production": [
@@ -40,6 +43,7 @@
   },
   "devDependencies": {
     "eslint-plugin-no-cyrillic-string": "^1.0.5",
+    "gh-pages": "^6.1.1",
     "globals": "^15.6.0"
   }
 }
