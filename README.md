@@ -32,7 +32,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ## FruitAutocomplete does the following:
 1. Simulates an API request to fetch the array of fruits by doing the following:\
  a. On render, displays the text “Loading...” for 3 seconds\
- b. After 3 seconds, stores the array of fruits into local state\
+ b. After 3 seconds, stores the array of fruits into local state
 2. Once the array of fruits is stored in state, renders an input field
 3. Renders (inside the input field) a down arrow on the far right
 4. When the input is focused, if no characters are typed into the input field, does not render
