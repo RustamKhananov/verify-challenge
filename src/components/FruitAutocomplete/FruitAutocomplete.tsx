@@ -4,6 +4,15 @@ import DropDown from './DropDown/DropDown'
 import { FRUITS } from '../../constants'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 
+/**
+ * Input with autocomplete with list of fruits.
+ * Dropdown opens when input is not empty.
+ * Dropdown shows filtered fruit list.
+ * Components filters list by start of fruit name.
+ * Example: you see "banana" if input value is B, but you do NOT see "banana" if input value is A.
+ * Dropdown closes on click outside of the component
+ * @return {React.ReactElement} The FruitAutocomplete component.
+ */
 function FruitAutocomplete() {
   const [fruits, setFruits] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(true)
